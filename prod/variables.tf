@@ -91,7 +91,7 @@ variable "domain_name" {
 variable "san_domains" {
   description = "SANs (Subject Alternative Names) for SSL certificate"
   type        = list(string)
-  default     = ["*. pgabootcam.org"]
+  default     = ["*.pgabootcam.org"]
 }
 
 variable "route53_zone_id" {
