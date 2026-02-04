@@ -2,7 +2,7 @@
 # Service Account for IRSA
 ################################################################################
 
-resource "kubernetes_service_account" "service_account" {
+resource "kubernetes_service_account_v1" "service_account" {
   metadata {
     name      = "aws-load-balancer-controller"
     namespace = "kube-system"
@@ -10,7 +10,7 @@ resource "kubernetes_service_account" "service_account" {
       "eks.amazonaws.com/role-arn" = aws_iam_role.lb_controller.arn
     }
   }
-}
+
 
 ################################################################################
 # IAM Role for Service Account (IRSA)
