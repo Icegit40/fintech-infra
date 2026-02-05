@@ -207,7 +207,7 @@ resource "kubernetes_namespace_v1" "monitoring" {
   depends_on = [module.eks]
 }
 
-resource "kubernetes_namespace" "fintech_dev" {
+resource "kubernetes_namespace_v1" "fintech_dev" {
   metadata {
     name = "fintech-dev"
     annotations = {
